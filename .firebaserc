@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "testproj-e6853": {
+      "hosting": {
+        "Olymprion-test": [
+          "testproj-e6853"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "testproj-e6853"
+  }
+}

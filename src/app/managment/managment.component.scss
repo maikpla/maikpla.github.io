@@ -1,0 +1,48 @@
+.table-container {
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+.table {
+    min-width: cell;
+}
+.row:hover{
+  background-color: whitesmoke;
+}
+.highlight {
+  background-color: #dbdbdb !important;
+}
+
+.mat-column-id {
+    width: 32px;
+    border-right: 1px solid currentColor;
+    padding-right: 24px;
+    text-align: center;
+  }
+  
+.mat-column-question {
+    padding-left: 16px;
+    padding-right: 200px;
+  }
+  .mat-column-choiceB {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .mat-column-choiceC {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .mat-column-choiceD {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .mat-column-choiceA {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+.buttons {
+    padding: 10px;
+    float: right;
+}
+  

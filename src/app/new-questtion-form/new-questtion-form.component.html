@@ -1,0 +1,30 @@
+<h1 mat-dialog-title>Add/Edit Question</h1>
+<div mat-dialog-content class="inputForm">
+  <div>
+    <mat-form-field >
+      <input matInput placeholder="Question" [(ngModel)]="data.question">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Answer" [(ngModel)]="data.answer">
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field>
+      <input matInput placeholder="Choice A" [(ngModel)]="data.choiceA">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Choice B" [(ngModel)]="data.choiceB">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Choice C" [(ngModel)]="data.choiceC">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Choice D" [(ngModel)]="data.choiceD">
+    </mat-form-field>
+  </div>
+  </div>
+  
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Cancel</button>
+  <button mat-button [mat-dialog-close]="data" cdkFocusInitial>Confirm</button>
+</div>

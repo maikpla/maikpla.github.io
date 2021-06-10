@@ -1,0 +1,27 @@
+<mat-drawer-container class="example-container" autosize>
+  <mat-drawer #drawer class="example-sidenav" mode="side" [opened]="true">
+    <nav>
+    <!--<div class="buttons">
+        <button mat-icon-button aria-label="Menu">
+          <mat-icon>menu</mat-icon>
+        </button>
+      </div>
+    -->
+    <div class="buttons">
+      <button mat-icon-button routerLink="game" color="primary" aria-label="Home">
+        <mat-icon>home</mat-icon>
+      </button> 
+    </div>
+    <div class="buttons">
+      <button mat-icon-button color="primary" routerLink="management" aria-label="Edit database">
+        <mat-icon>edit</mat-icon>
+      </button>
+    </div>
+    </nav>
+  </mat-drawer>
+
+  <div class="example-sidenav-content">
+    <router-outlet></router-outlet>
+  </div>
+
+</mat-drawer-container>
