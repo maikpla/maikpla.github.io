@@ -9,8 +9,10 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { environment } from 'src/environments/environment';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { NewQuesttionFormComponent } from './new-questtion-form/new-questtion-form.component';
-
 import { MaterialModule } from './material-module';
+import { LandingPageComponent } from './landing-page/landing-page.component';
+import { LoginComponent } from './login/login.component';
+import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +20,9 @@ import { MaterialModule } from './material-module';
     routingComponents,
     PageNotFoundComponent,
     NewQuesttionFormComponent,
+    LandingPageComponent,
+    LoginComponent,
+    ForgotPasswordComponent,
     
   ],
   imports: [
@@ -26,7 +31,8 @@ import { MaterialModule } from './material-module';
     BrowserAnimationsModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
-    MaterialModule
+    MaterialModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

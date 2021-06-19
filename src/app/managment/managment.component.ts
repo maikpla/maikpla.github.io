@@ -17,12 +17,12 @@ export class ManagmentComponent implements OnInit {
   questionList : IQuestion[] = [];
   ngOnInit(): void {
     this.qService.getQuestions().subscribe(questions => {
-      this.questionList = questions
+      this.questionList = questions;
     })
   }
   onDoubleClick(row: any): void{
-    let Canswer,Cquestion, CchoiceA, CchoiceB, CchoiceC, CchoiceD : string = '';
-    let currQuestion : IQuestion = {question: row.question, answer: row.answer, choiceA: row.choiceA, choiceB: row.choiceB, choiceC: row.choiceC, choiceD: row.choiceD};
+    // Canswer,Cquestion, CchoiceA, CchoiceB, CchoiceC, CchoiceD : string = '';
+    let currQuestion : IQuestion = {question: row.question, randId: row.randId, answer: row.answer, choiceA: row.choiceA, choiceB: row.choiceB, choiceC: row.choiceC, choiceD: row.choiceD};
     const dialogRef = this.dialog.open(NewQuesttionFormComponent,{ data: currQuestion})
     let passedResult: IQuestion;
     dialogRef.afterClosed().subscribe(
@@ -41,6 +41,7 @@ export class ManagmentComponent implements OnInit {
     let passedResult: IQuestion;
     dialogRef.afterClosed().subscribe(result=> {
       passedResult = result;
+      passedResult.randId = this.qService.getRandomInt(0,999999);
       if (passedResult != undefined) this.qService.createQuestion(passedResult);
 
     })
@@ -50,6 +51,7 @@ export class ManagmentComponent implements OnInit {
   onRowClicked(row: MatRow){
     this.selectedRow = row;
   }
+  
   removeElement(): void{
     this.qService.deleteQuestion(this.selectedRow.propertyId); 
   }

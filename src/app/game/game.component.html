@@ -1,1 +1,8 @@
-<p>game cmp</p>
+<h1 *ngIf="gameState !== 0">Question {{_currSession.currQues}}: {{_currQuestion.question}}</h1>
+<button *ngIf="gameState !==  0" mat-button (click)="setAnswerA()">A</button>
+<button *ngIf="gameState !== 0" mat-button (click)="setAnswerB()">B</button>
+<button *ngIf="gameState !== 0" mat-button (click)="setAnswerC()">C</button>
+<button *ngIf="gameState !== 0" mat-button (click)="setAnswerD()">D</button>
+<button *ngIf="gameState !== 0" mat-button (click)="setNextQuestion()">set next question</button>
+<button *ngIf="gameState !== 0" mat-button (click)="setPrevQuestion()">set prev question</button>
+<button  mat-button (click)="startNew()">Start new GameSession in activesessions</button>
